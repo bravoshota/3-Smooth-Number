@@ -8,8 +8,8 @@ typedef struct
     unsigned long long j;
 } Pair;
 
-#define MatrixSz 300
-#define VisitSz 300
+#define MatrixSz 500
+#define VisitSz 10000
 
 char visitedMatrix[MatrixSz][MatrixSz];
 Pair toVisit[VisitSz];
@@ -52,7 +52,7 @@ unsigned long long a3smoothNumber(unsigned long long N)
 
     for (i = 0; i < N; ++i)
     {
-        printf("arr[%llu] = %llu\n", i, res);
+        printf("3s-num[%llu] = %llu; (visited = %llu)\n", i, res, visited);
 
         I = -1;
         res = -1;
@@ -104,6 +104,6 @@ unsigned long long a3smoothNumber(unsigned long long N)
 
 int main()
 {
-    a3smoothNumber(1000);
+    a3smoothNumber(2000);
     return 0;
 }
